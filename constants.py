@@ -1,0 +1,1 @@
+PRETRAINED_MODEL = "facebook/bart-large-cnn"
