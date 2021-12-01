@@ -53,11 +53,12 @@ def clean_data(input: str) -> str:
     result = remove_non_ascii_characters(input)
     result = convert_to_lower_case(result)
     result = remove_special_characters(result)
-    result = remove_non_english_characters(result)
+    # result = remove_non_english_characters(result)
     result = remove_excessive_space(result)
     result = tokenize_words(result)
-    result = remove_stop_words(result)
-    return result
+    # result = remove_stop_words(result)
+    final_resultl = " ".join(word for word in result)
+    return final_resultl
 
 if __name__ == "__main__":
     input = "àA String withé      fuünny's asdefa    # charactersß."

@@ -11,6 +11,7 @@ def input_url(input_control):
 def input_textbox(input_control):
     input: str = extract_from_textbox(input_control)
     result = clean_data(input)
+    print(str(result))
     return summarize_text_bart(result)
 
 def input_browse(input_control):
