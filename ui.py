@@ -28,7 +28,6 @@ def urlbox_submit(url_input, url_output):
 
 def textbox_submit(textbox_input, textbox_output):
     result = input_textbox(textbox_input)
-    print(result)
     textbox_output.insert(INSERT, result)
 
 def browsebox_submit(browse_input, browse_output):

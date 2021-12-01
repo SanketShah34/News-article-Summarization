@@ -14,7 +14,6 @@ def generate_summary(input: str, model, tokenize, minimum: int, maximum: int):
     # Referred from:
     print("Summarization starting...")
     input = [input]
-    print(input)
     result = tokenize.batch_encode_plus(input, max_length=1024, return_tensors='pt')
     summerized_text = model.generate(result['input_ids'], attention_mask=result['attention_mask'], num_beams=4, min_length=minimum, max_length=maximum)
     print("Summarization ended...")
