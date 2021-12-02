@@ -7,7 +7,9 @@ from preprocessing.data_extraction import extract_from_url, extract_from_textbox
 def input_url(input_control):
     input: str = extract_from_url(input_control)
     result = clean_data(input)
-    return result
+    output = summarize_text_bart(result)
+    eval_rouge(input, str(output))
+    return output
 
 def input_textbox(input_control):
     input: str = extract_from_textbox(input_control)
@@ -19,4 +21,6 @@ def input_textbox(input_control):
 def input_browse(input_control):
     input: str = extract_from_browse(input_control)
     result = clean_data(input)
-    return result
+    output = summarize_text_bart(result)
+    eval_rouge(input, str(output))
+    return output
