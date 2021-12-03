@@ -3,7 +3,7 @@ import constants
 
 def generate_model():
     print("Model generation starting.....")
-    training_dataset = constants.PRETRAINED_MODEL
+    training_dataset = constants.PRETRAINED_MODEL_BART
     training_dataset = training_dataset.replace(".", "-")
     print(training_dataset)
     model = BartForConditionalGeneration.from_pretrained(training_dataset)
